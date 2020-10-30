@@ -50,11 +50,13 @@ allprojects {
 }
 
 publish {
+    //api 'com.example.libapplication:TimeUtil:1.0.0'
     userOrg = 'yangskangs'      //bintray注册的用户名
     repoName = 'android'           //bintray仓库名
-    groupId = 'com.example.libapplication'         //compile引用时的第1部分groupId，一般为包名
+    groupId = 'com.example.libapplication'         //compile引用时的第1部分groupId，一般为module的包名
     artifactId = 'TimeUtil'     //compile引用时的第2部分项目名，这个需要与我们之前创建的package的Name一样，要不会上传失败
     publishVersion = '1.0.0'    //compile引用时的第3部分版本号
     desc = 'This is a library '  //描述  随便写
     website = ''   //项目的网页，可以写源码的GitHub地址
+    //Terminal输入：gradlew clean build bintrayUpload -PbintrayUser=yangskangs -PbintrayKey=15f23dc5ac1113b3e9ffbdd4c5881a15f59900d9 -PdryRun=false
 }
